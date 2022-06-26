@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MILERD</title>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="./index.html">
+                    <img class="logo__img" src="./images/logo.svg" alt="logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#tabs">Описание</a></li>
+                        <li class="menu__item"><a class="menu__link" href="./catalog.html">Каталог</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#sertificate">Сертификаты</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#contacts">Контакты</a></li>
+                    </ul>                
+                </nav>
+
+                    <div class="select">
+                        <span class="select__title">Language</span>
+                        <button class="select__btn">RU</button>
+                        <ul class="select__list">
+                            <li class="select__item" data-value="RU">RU</li>
+                            <li class="select__item" data-value="EN">EN</li>
+                        </ul>
+                        <input class="select__input-hidden" type="text" name="select-lang" value="">
+                    </div>
+
+
+                <button class="burger" id="burger" type="button">
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__inner">
+                    <img class="hero__img" src="./images/hero-1 1.png" alt="">
+                    <div class="hero__content">
+                        <h1 class="hero__title">
+                            Бактерицидные <span>рециркуляторы</span>
+                        </h1>
+                        <p class="hero__text">
+                            для медицинских организаций
+                        </p>
+                        <a class="btn__catalog" href="./catalog.html">Выбрать модель</a>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        <!-- / hero -->
+
+        <section class="tabs" id="tabs">
+            <div class="container">
+                <div class="tabs__nav">
+                    <button class="tabs__btn" type="button" data-tab="#tab1">Серия STANDART</button>
+                    <button class="tabs__btn" type="button" data-tab="#tab2">Серия PROFESSIONAL</button>
+                    <button class="tabs__btn" type="button" data-tab="#tab3">Серия ELITE</button>
+                </div>
+                <div class="tabs__inner">
+                    <div class="tabs__item" id="tab1">
+                        <div class="tabs__content">
+                            <h3 class="tab__title">
+                                Дезинфицируйте воздух с помощью компактного и стильного рециркулятора. Выберите
+                                устройство
+                                из серии с подходящей для вашего помещения производительностью.
+                            </h3>
+                            <div class="tab__text">
+                                <h4>Что важно знать о рециркуляторах Milerd?</h4>
+                                <ol>
+                                    <li>
+                                        Изделие медицинского назначения с Регистрационным удостоверением
+                                    </li>
+                                    <li>Эффективно во всех 5-ти категориях помещений медицинских учреждений</li>
+                                    <li>Обеспечивает наивысшую бактерицидную эффективность на уровне 99,9%
+                                        обеззараживания</li>
+                                        <li>Лампа из увиолевого стекла не пропускает коротковолновое УФ-излучение с
+                                            длиной волны менее 200 нм и защищает от образования озона</li>
+                                            <li>Корпус из высококачественной промышленной стали с полимерным порошковым
+                                                покрытием препятствует возникновению коррозии и гарантирует минимальный
+                                                срок службы прибора не менее 10 лет</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="tab__img">
+                            <img src="./images/DZR_M_46_2.png" alt="">
+                        </div>
+                        
+                    </div>
+
+                    <div class="tabs__item" id="tab2">
+                        <div class="tabs__content">
+                            <h3 class="tab__title">
+                                Настройте график автовключения/выключения рециркулятора и избавьтесь от ведения журнала
+                                учёта дезинфекции воздуха. Отслеживайте ресурс ламп и управляйте бактерицидным потоком.
+                            </h3>
+                            <div class="tab__text">
+                                <h4>Что важно знать о рециркуляторах Milerd?</h4>
+                                <ol>
+                                    <li>
+                                        Изделие медицинского назначения с Регистрационным удостоверением
+                                    </li>
+                                    <li>Эффективно во всех 5-ти категориях помещений медицинских учреждений</li>
+                                    <li>Обеспечивает наивысшую бактерицидную эффективность на уровне 99,9%
+                                        обеззараживания</li>
+                                    <li>Лампа из увиолевого стекла не пропускает коротковолновое УФ-излучение с
+                                        длиной волны менее 200 нм и защищает от образования озона</li>
+                                    <li>Корпус из высококачественной промышленной стали с полимерным порошковым
+                                        покрытием препятствует возникновению коррозии и гарантирует минимальный
+                                        срок службы прибора не менее 10 лет</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="tab__img">
+                            <img src="./images/proff.png" alt="">
+                        </div>
+                    </div>
+                    <div class="tabs__item" id="tab3">
+                        <div class="tabs__content">
+                            <h3 class="tab__title">
+                                Позаботьтесь о защите от вирусов и бактерий в переговорных комнатах, конференц-залах и
+                                кабинетах руководства. Высокая мощность бактерицидного потока и утончённый дизайн в
+                                элитных рециркуляторах Milerd.
+                            </h3>
+                            <div class="tab__text">
+                                <h4>Что важно знать о рециркуляторах Milerd?</h4>
+                                <ol>
+                                    <li>
+                                        Изделие медицинского назначения с Регистрационным удостоверением
+                                    </li>
+                                    <li>Эффективно во всех 5-ти категориях помещений медицинских учреждений</li>
+                                    <li>Обеспечивает наивысшую бактерицидную эффективность на уровне 99,9%
+                                        обеззараживания</li>
+                                    <li>Лампа из увиолевого стекла не пропускает коротковолновое УФ-излучение с
+                                        длиной волны менее 200 нм и защищает от образования озона</li>
+                                    <li>Корпус из высококачественной промышленной стали с полимерным порошковым
+                                        покрытием препятствует возникновению коррозии и гарантирует минимальный
+                                        срок службы прибора не менее 10 лет</li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="tab__img">
+                            <img src="./images/elite.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / tabs -->
+
+
+        <section class="sertificate" id="sertificate">
+            <div class="container">
+                <h2 class="sertificate__title">Сертификаты соответствия и регистрационные удостоверения</h2>
+
+                <div class="slider-wrapper">
+                    <div class="slider-container">
+                        <ul class="slider-track">
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                            <li class="slider-item">
+                                <img src="./images/РУ_page-0001.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-btns">
+                        <button class="button-prev slider-btn">
+                            <svg width="40" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 12.5C14.7074 12.4999 14.4241 12.6025 14.1994 12.7898C13.9746 12.9771 13.8227 13.2372 13.77 13.525L13.75 13.75V36.25C13.7494 36.5624 13.8658 36.8637 14.0763 37.0945C14.2867 37.3253 14.576 37.469 14.8871 37.4972C15.1981 37.5254 15.5085 37.4362 15.7571 37.247C16.0056 37.0578 16.1744 36.7824 16.23 36.475L16.25 36.25V13.75C16.25 13.4185 16.1183 13.1006 15.8839 12.8662C15.6495 12.6317 15.3315 12.5 15 12.5ZM34.635 12.865C34.4279 12.6583 34.1548 12.5309 33.8633 12.5048C33.5719 12.4788 33.2805 12.5558 33.04 12.7225L32.865 12.865L21.615 24.115C21.4083 24.3222 21.2808 24.5953 21.2548 24.8867C21.2288 25.1782 21.3058 25.4695 21.4725 25.71L21.615 25.885L32.865 37.135C33.0855 37.3565 33.3809 37.4873 33.6931 37.5018C34.0052 37.5162 34.3115 37.4132 34.5515 37.2131C34.7914 37.0129 34.9478 36.7302 34.9896 36.4205C35.0314 36.1108 34.9558 35.7967 34.7775 35.54L34.635 35.365L24.2675 25L34.635 14.635C34.7514 14.5189 34.8438 14.381 34.9068 14.2291C34.9698 14.0773 35.0022 13.9145 35.0022 13.75C35.0022 13.5856 34.9698 13.4228 34.9068 13.2709C34.8438 13.1191 34.7514 12.9811 34.635 12.865V12.865Z"
+                                    fill="rgb(91, 91, 91)" />
+                            </svg>
+                        </button>
+                        <button class="button-next slider-btn">
+                            <svg width="40" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M33.75 12.5C34.0426 12.4999 34.3259 12.6025 34.5507 12.7898C34.7754 12.9771 34.9274 13.2372 34.98 13.525L35 13.75V36.25C35.0006 36.5624 34.8842 36.8637 34.6738 37.0945C34.4633 37.3253 34.1741 37.469 33.863 37.4972C33.5519 37.5254 33.2415 37.4362 32.993 37.247C32.7444 37.0578 32.5757 36.7824 32.52 36.475L32.5 36.25V13.75C32.5 13.4185 32.6317 13.1006 32.8662 12.8662C33.1006 12.6317 33.4185 12.5 33.75 12.5ZM14.115 12.865C14.3222 12.6583 14.5953 12.5309 14.8867 12.5048C15.1782 12.4788 15.4695 12.5558 15.71 12.7225L15.885 12.865L27.135 24.115C27.3417 24.3222 27.4692 24.5953 27.4952 24.8867C27.5213 25.1782 27.4442 25.4695 27.2775 25.71L27.135 25.885L15.885 37.135C15.6646 37.3565 15.3691 37.4873 15.057 37.5018C14.7448 37.5162 14.4386 37.4132 14.1986 37.2131C13.9586 37.0129 13.8023 36.7302 13.7604 36.4205C13.7186 36.1108 13.7943 35.7967 13.9725 35.54L14.115 35.365L24.4825 25L14.115 14.635C13.9986 14.5189 13.9063 14.381 13.8433 14.2291C13.7802 14.0773 13.7478 13.9145 13.7478 13.75C13.7478 13.5856 13.7802 13.4228 13.8433 13.2709C13.9063 13.1191 13.9986 12.9811 14.115 12.865Z"
+                                    fill="rgb(91, 91, 91)" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- / tabs -->
+
+        <section class="contacts" id="contacts">
+            <div class="container">
+                <h2 class="contacts__title">Узнайте какой рециркулятор подойдет для вашего помещения</h2>
+                <div class="contacts__inner">
+                     <div class="contacts__content">
+                            <p class="contacts__text">
+                             Заполните форму или свяжитесь с нами для консультации
+                         </p>
+                         <p class="contacts__bold">8 (495) 108-07-82</p>
+                         <p class="contacts__bold">info@milerd.ru</p>
+                         
+                         <p class="contacts__name">ООО «Милерд Электроникс»</p>
+                         <p>127018, Россия, Москва, Складочная улица, 1с1</p>
+                         <p>ИНН: 7716949917</p>
+                         <p>КПП: 771601001</p>
+                         <p>ОГРН: 1207700357875</p>
+                         <p>ОКПО: 0187232962</p>
+                     </div>
+
+                     <div class="contacts__form">
+                        <form class="quiz-form" id="quiz-form"  method="#" action="#"
+                            novalidate>
+                            
+                            <div class="form__group">
+                                <label class="form__label" for="area">1. К какой категории относится помещение?</label>
+                            <div class="select">
+
+                                 <button class="select__btn select__btn-quiz">Выберите категорию помещения</button>
+                                <ul class="select__list select__list-quiz">
+                                    <li class="select__item select__item-quiz" data-value="1cat">1 категория —
+                                        операционные, родильные отделения</li>
+                                    <li class="select__item select__item-quiz" data-value="2cat">2 категория —
+                                        лаборатории, процедурные</li>
+                                    <li class="select__item select__item-quiz" data-value="3cat">3 категория — палаты,
+                                        кабинеты и другие
+                                        помещения ЛПУ</li>
+                                        <li class="select__item select__item-quiz" data-value="4cat">4 категория —
+                                            общественные помещения</li>
+                                            <li class="select__item select__item-quiz" data-value="5cat">5 категория —
+                                                лестничные площадки
+                                                ЛПУ, туалеты</li>
+                                </ul>
+                                <input class="select__input-hidden" type="text" name="select-lang" value="">
+                            </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label class="form__label" for="area">2. Укажите площадь помещения в м<sup>2</sup></label>
+                                <div class="range">
+
+                                    <div class="slider-value">
+                                        <span class="value-number">100</span>
+                                    </div>
+
+                                    <div class="field">
+                                        <div class="value left">10 м<sup>2</sup></div>
+                                        <input class="field-input" type="range" min="10" max="200" value="100"
+                                            step="10">
+                                        <div class="value right">200 м<sup>2</sup></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label class="form__label" for="productName">3. Сколько людей находятся в помещении</label>
+
+                                <div class="radios">
+                                    <label class="radio__label" for="peopleNum1-10">
+                                        <input checked class="radio__input" value="1-10" id="peopleNum1-10" type="radio"
+                                            name="peopleNum">
+                                        <div class="radio-fake"></div>
+                                            1-10
+                                          </label>
+                                    
+                                    <label class="radio__label" for="peopleNum10-20">
+                                        <input class="radio__input" value="10-20" id="peopleNum10-20" type="radio"
+                                            name="peopleNum">
+                                        <div class="radio-fake"></div>           
+                                         10-20
+                                    </label>
+                                    
+                                    <label class="radio__label" for="peopleNumOver20">
+                                        <input class="radio__input" value="over20" id="peopleNumOver20" type="radio"
+                                            name="peopleNum">
+                                        <div class="radio-fake"></div>
+                                        больше 20
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <label class="form__label" for="phone"> Номер телефона*</label>
+                                <input class="form__input" id="phone" type="tel" placeholder="Укажите номер телефона*"
+                                    name="tel" data-validate-field="tel">
+                                    <div class="error-message"></div>
+                                    <div class="success-message"></div>
+                            </div>
+
+                            <div class="form__group">
+                                <button class="btn-quiz" id="btn-quiz" type=" submit">Отправить</button>
+                                <p class="politic">Нажимая на кнопку, вы соглашаетесь с
+                                    <a class="checkbox__label-politic" href="#">политикой конфиденциальности</a></p>
+                            </div>
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- / contacts -->
+    </main>
+    <footer class="footer">
+       <div class="container">
+         <div class="footer__inner">
+             <a class="footer-logo" href="./index.html">
+                 <img class="logo__img" src="./images/logo-footer.svg" alt="logo">
+             </a>
+
+             <div class="footer__contacts">
+                <p>8 (495) 108-07-82</p>
+                <p>info@milerd.ru</p>
+             </div>
+         </div>
+       </div>
+
+    </footer>
+    <!-- / footer -->
+    <script src="js/main.js"></script>
+</body>
+</html>
