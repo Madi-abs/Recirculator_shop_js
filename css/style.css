@@ -336,7 +336,12 @@ body.locked {
 }
 @media (max-width: 576px) {
   .hero__img {
-    padding-top: 230px;
+    padding-top: 130px;
+  }
+}
+@media (max-width: 412px) {
+  .hero__img {
+    padding-top: 40px;
   }
 }
 
@@ -358,8 +363,13 @@ body.locked {
 }
 @media (max-width: 576px) {
   .hero__content {
-    top: 100px;
+    top: 50px;
     left: 0;
+  }
+}
+@media (max-width: 412px) {
+  .hero__content {
+    top: 30px;
   }
 }
 
@@ -386,12 +396,19 @@ body.locked {
 @media (max-width: 576px) {
   .hero__title {
     font-size: 36px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 412px) {
+  .hero__title {
+    font-size: 28px;
+    margin-bottom: 0;
   }
 }
 
 .hero__text {
   font-weight: 300;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 a.btn__catalog {
@@ -614,7 +631,7 @@ a.btn__catalog:hover {
   transition: 0.5s;
 }
 .slider-item img {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,6 +770,7 @@ a.btn__catalog:hover {
   .contacts__form {
     margin: 0 auto;
     text-align: left;
+    padding: 20px;
   }
 }
 
@@ -1028,13 +1046,13 @@ a.btn__catalog:hover {
   }
 }
 
-.footer-logo {
+.footer__logo {
   margin-bottom: 40px;
 }
 @media (max-width: 768px) {
-  .footer-logo {
-    margin-bottom: 40px;
-    margin: 0 auto;
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1307,6 +1325,11 @@ a.btn-back:hover {
     padding: 40px 10px 40px 20px;
   }
 }
+@media (max-width: 412px) {
+  .catalog__img {
+    display: none;
+  }
+}
 
 .catalog__content {
   width: 65%;
@@ -1320,6 +1343,12 @@ a.btn-back:hover {
 @media (max-width: 768px) {
   .catalog__content {
     padding-left: 20px;
+  }
+}
+@media (max-width: 412px) {
+  .catalog__content {
+    padding-left: 0;
+    width: 100%;
   }
 }
 
@@ -1377,6 +1406,16 @@ a.btn-back:hover {
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
+}
+@media (max-width: 768px) {
+  .products__list {
+    padding: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .products__list {
+    padding: 50px 0;
+  }
 }
 
 .product__item {

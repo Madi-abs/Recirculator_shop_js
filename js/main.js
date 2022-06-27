@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function () {
    let sliderItem = document.querySelectorAll('.slider-item');
    let product_page = Math.ceil(sliderItem.length/3);
    let l = 0;
-	let movePer = 30.34;
-	let maxMove = 203;
+	let movePer = 33;
+	let maxMove = 150;
 
 	// mobile_view	
 	let mob_view = window.matchMedia("(max-width: 768px)");
