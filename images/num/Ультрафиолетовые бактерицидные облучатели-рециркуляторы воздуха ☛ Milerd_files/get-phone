@@ -1,0 +1,1 @@
+window.roistatReusePhone("8 (495) 108-61-32", 150, null, "[{\"phone\":\"8 (495) 108-61-32\",\"css_selectors\":[],\"replaceable_numbers\":[\"84951080782\",\"74951080782\"]}]");

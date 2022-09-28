@@ -1,0 +1,46 @@
+(function () {
+
+    var cookie_domain = window.location.hostname;
+
+    if (!Array.prototype.forEach) {Array.prototype.forEach = function (callback, thisArg) {var T, k;if (this == null) {throw new TypeError(' this is null or not defined');}var O = Object(this);var len = O.length >>> 0;if (typeof callback !== 'function') {throw new TypeError(callback + ' is not a function');}if (arguments.length > 1) {T = thisArg;}k = 0;while (k < len) {var kValue;if (k in O) {kValue = O[k];callback.call(T, kValue, k, O);}k++;}};}
+    if (!Object.keys) {Object.keys = (function() {'use strict';var hasOwnProperty = Object.prototype.hasOwnProperty,hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),dontEnums = ['toString','toLocaleString','valueOf','hasOwnProperty','isPrototypeOf','propertyIsEnumerable','constructor'],dontEnumsLength = dontEnums.length;return function(obj) {if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {throw new TypeError('Object.keys called on non-object');}var result = [], prop, i;for (prop in obj) {if (hasOwnProperty.call(obj, prop)) {result.push(prop);}}if (hasDontEnumBug) {for (i = 0; i < dontEnumsLength; i++) {if (hasOwnProperty.call(obj, dontEnums[i])) {result.push(dontEnums[i]);}}}return result;};}());}
+
+    if (!cookie_domain) {
+        return;
+    }
+
+    function set_cookie (cookie, value) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + 62208000000); //1000*60*60*24*30*24 (2 years)
+        document.cookie = cookie + '=' + value + '; expires=' + expires.toGMTString() + '; domain=' + cookie_domain + '; path=/';
+    }
+
+    var qs = document.location.search,
+        source = qs.match(/utm_source=(.+?)(&|[#]|$)/),
+        medium = qs.match(/utm_medium=(.+?)(&|[#]|$)/),
+        content = qs.match(/utm_content=(.+?)(&|[#]|$)/),
+        campaign = qs.match(/utm_campaign=(.+?)(&|[#]|$)/),
+        term = qs.match(/utm_term=(.+?)(&|[#]|$)/);
+
+    var utm = {
+        utm_source: (source && source[1])? source[1]: null,
+        utm_medium: (medium && medium[1])? medium[1]: null,
+        utm_content: (content && content[1])? content[1]: null,
+        utm_campaign: (campaign && campaign[1])? campaign[1]: null,
+        utm_term: (term && term[1])? term[1]: null
+    };
+
+    Object.keys(utm).forEach(function (k) {
+        if (!utm.hasOwnProperty(k)) {
+            return;
+        }
+
+        var v = utm[k];
+
+        if (!v) {
+            return;
+        }
+
+        set_cookie(k, v);
+    });
+})();
