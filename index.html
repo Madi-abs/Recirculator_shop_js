@@ -6,10 +6,10 @@
     <title>MILERD</title>
     
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" /> -->
 </head>
 <body>
     <header class="header">
@@ -57,12 +57,40 @@
                         <p class="hero__text">
                             для медицинских организаций
                         </p>
-                        <a class="btn__catalog" href="./catalog.html">Выбрать модель</a>
+                        <a class="btn btn__hero" href="./catalog.html">Выбрать модель</a>
                     </div>
                   </div>
             </div>
         </section>
         <!-- / hero -->
+
+
+        <section class="benefits">
+            <div class="container">
+                <h2 class="section-title benefits__title">Преимущества работы с нами</h2>
+                <div class="benefits__inner">
+                    <div class="benefit">
+                        <img class="benefit__img" src="images/icons/route.png" alt="">
+                        <p class="benefit__titile">Удобная доставка</p>
+                        <p class="benefit__text">Доставляем в день заказа по Москве и в срок от 2 до 8 дней по РФ
+                            бесплатно</p>
+                    </div>
+                    <div class="benefit">
+                        <img class="benefit__img" src="images/icons/review.png" alt="">
+                        <p class="benefit__titile">Оптом и в розницу</p>
+                        <p class="benefit__text">Работаем с физлицами и юрлицами от 1го прибора, возможна оплата по
+                            безналу с НДС</p>
+                    </div>
+                    <div class="benefit">
+                        <img class="benefit__img" src="images/icons/robot-arm.png" alt="">
+                        <p class="benefit__titile">Собственное производство</p>
+                        <p class="benefit__text">Производственные мощности более 50 тыс. изделий в месяц расположено в
+                            г. Королев</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <section class="tabs" id="tabs">
             <div class="container">
@@ -162,66 +190,62 @@
         </section>
         <!-- / tabs -->
 
-
-        <section class="sertificate" id="sertificate">
+        <section class="foto-slider">
             <div class="container">
-                <h2 class="sertificate__title">Сертификаты соответствия и регистрационные удостоверения</h2>
+                <div class="slider">
+                    <div class="slider-nav">
+                        <label for="s1" class="slider-nav-item"></label>
+                        <label for="s2" class="slider-nav-item"></label>
+                        <label for="s3" class="slider-nav-item"></label>
+                        <label for="s4" class="slider-nav-item"></label>
+                        <label for="s5" class="slider-nav-item"></label>
+                    </div>
 
-                <div class="slider-wrapper">
-                    <div class="slider-container">
-                        <ul class="slider-track">
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                            <li class="slider-item">
-                                <img src="./images/РУ_page-0001.webp" alt="Сертификат соответствия">
-                            </li>
-                        </ul>
+                    <div class="slider-items">
+
+                        <input type="radio" name="s" id="s1">
+                        <input type="radio" name="s" id="s2">
+                        <input type="radio" name="s" id="s3">
+                        <input type="radio" name="s" id="s4">
+                        <input type="radio" name="s" id="s5">
+
+                        <div class="slider-item s1">
+                            <img src="images/slider/slider-1.jpg" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/slider/slider-2.jpg" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/slider/slider-3.jpg" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/slider/slider-4.jpg" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="images/slider/slider-5.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="slider-btns">
-                        <button class="button-prev slider-btn">
-                            <svg width="40" height="50" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M15 12.5C14.7074 12.4999 14.4241 12.6025 14.1994 12.7898C13.9746 12.9771 13.8227 13.2372 13.77 13.525L13.75 13.75V36.25C13.7494 36.5624 13.8658 36.8637 14.0763 37.0945C14.2867 37.3253 14.576 37.469 14.8871 37.4972C15.1981 37.5254 15.5085 37.4362 15.7571 37.247C16.0056 37.0578 16.1744 36.7824 16.23 36.475L16.25 36.25V13.75C16.25 13.4185 16.1183 13.1006 15.8839 12.8662C15.6495 12.6317 15.3315 12.5 15 12.5ZM34.635 12.865C34.4279 12.6583 34.1548 12.5309 33.8633 12.5048C33.5719 12.4788 33.2805 12.5558 33.04 12.7225L32.865 12.865L21.615 24.115C21.4083 24.3222 21.2808 24.5953 21.2548 24.8867C21.2288 25.1782 21.3058 25.4695 21.4725 25.71L21.615 25.885L32.865 37.135C33.0855 37.3565 33.3809 37.4873 33.6931 37.5018C34.0052 37.5162 34.3115 37.4132 34.5515 37.2131C34.7914 37.0129 34.9478 36.7302 34.9896 36.4205C35.0314 36.1108 34.9558 35.7967 34.7775 35.54L34.635 35.365L24.2675 25L34.635 14.635C34.7514 14.5189 34.8438 14.381 34.9068 14.2291C34.9698 14.0773 35.0022 13.9145 35.0022 13.75C35.0022 13.5856 34.9698 13.4228 34.9068 13.2709C34.8438 13.1191 34.7514 12.9811 34.635 12.865V12.865Z"
-                                    fill="rgb(91, 91, 91)" />
-                            </svg>
-                        </button>
-                        <button class="button-next slider-btn">
-                            <svg width="40" height="50" viewBox="0 0 50 50" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M33.75 12.5C34.0426 12.4999 34.3259 12.6025 34.5507 12.7898C34.7754 12.9771 34.9274 13.2372 34.98 13.525L35 13.75V36.25C35.0006 36.5624 34.8842 36.8637 34.6738 37.0945C34.4633 37.3253 34.1741 37.469 33.863 37.4972C33.5519 37.5254 33.2415 37.4362 32.993 37.247C32.7444 37.0578 32.5757 36.7824 32.52 36.475L32.5 36.25V13.75C32.5 13.4185 32.6317 13.1006 32.8662 12.8662C33.1006 12.6317 33.4185 12.5 33.75 12.5ZM14.115 12.865C14.3222 12.6583 14.5953 12.5309 14.8867 12.5048C15.1782 12.4788 15.4695 12.5558 15.71 12.7225L15.885 12.865L27.135 24.115C27.3417 24.3222 27.4692 24.5953 27.4952 24.8867C27.5213 25.1782 27.4442 25.4695 27.2775 25.71L27.135 25.885L15.885 37.135C15.6646 37.3565 15.3691 37.4873 15.057 37.5018C14.7448 37.5162 14.4386 37.4132 14.1986 37.2131C13.9586 37.0129 13.8023 36.7302 13.7604 36.4205C13.7186 36.1108 13.7943 35.7967 13.9725 35.54L14.115 35.365L24.4825 25L14.115 14.635C13.9986 14.5189 13.9063 14.381 13.8433 14.2291C13.7802 14.0773 13.7478 13.9145 13.7478 13.75C13.7478 13.5856 13.7802 13.4228 13.8433 13.2709C13.9063 13.1191 13.9986 12.9811 14.115 12.865Z"
-                                    fill="rgb(91, 91, 91)" />
-                            </svg>
-                        </button>
-                    </div>
+
                 </div>
             </div>
         </section>
-        <!-- / slider -->
+        <!-- / foto-slider -->
+
+        <section class="sertificate" id="sertificate">
+            <div class="container">
+                <div class="sertificate__bg">
+                    <h3 class="sertificate__title">Сертификаты соответствия и регистрационные удостоверения
+                    </h3>
+                    <a class="btn sertificate__btn" href="images/РУ_page-0001.jpg" download="">Скачать</a>
+                </div>                
+            </div>
+        </section>
+        <!-- / sertificate -->
+        
 
         <section class="contacts" id="contacts">
             <div class="container">
-                <h2 class="contacts__title">Узнайте какой рециркулятор подойдет для вашего помещения</h2>
+                <h2 class="section-title contacts__title">Узнайте какой рециркулятор подойдет для вашего помещения</h2>
                 <div class="contacts__inner">
                      <div class="contacts__content">
                             <p class="contacts__text">
@@ -319,7 +343,7 @@
                             </div>
 
                             <div class="form__group">
-                                <button class="btn-quiz" id="btn-quiz" type="submit">Отправить</button>
+                                <button class="btn btn-quiz" id="btn-quiz" type="submit">Отправить</button>
                                 <p class="politic">Нажимая на кнопку, вы соглашаетесь с
                                     <a class="checkbox__label-politic" href="#">политикой конфиденциальности</a></p>
                             </div>
@@ -330,6 +354,7 @@
         </section>
         <!-- / contacts -->
     </main>
+
     <footer class="footer">
        <div class="container">
          <div class="footer__inner">
@@ -346,6 +371,8 @@
 
     </footer>
     <!-- / footer -->
+    
     <script src="js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
 </body>
 </html>

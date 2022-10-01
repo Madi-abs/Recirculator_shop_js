@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-   // *** Мобильное бургер-меню ***
+// *** Мобильное бургер-меню ***
    const burger = document.querySelector('.burger');
       const headerMenu = document.querySelector('.menu');
 
@@ -126,94 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
    
 
 
-   // *** Slider JS ***
-   let sliderBtn = document.querySelectorAll('.slider-btn');
-   let sliderItem = document.querySelectorAll('.slider-item');
-   let product_page = Math.ceil(sliderItem.length/3);
-   let l = 0;
-	let movePer = 33;
-	let maxMove = 250;
-
-	// mobile_view	
-	let mob_view = window.matchMedia("(max-width: 768px)");
-   if (mob_view.matches) {
-	 	movePer = 100.36;
-	 	maxMove = 504;
-	 }
-
-    let right_mover = ()=>{
-		l = l + movePer;
-		if (sliderItem == 1){l = 0; }
-		for(const i of sliderItem)
-		{
-			if (l > maxMove){l = l - movePer;}
-			i.style.left = '-' + l + '%';
-		}
-	}
-
-   let left_mover = ()=>{
-		l = l - movePer;
-		if (l<=0){l = 0;}
-		for(const i of sliderItem){
-			if (product_page>1){
-				i.style.left = '-' + l + '%';
-			}
-		}
-	}
-	sliderBtn[1].onclick = ()=>{right_mover();}
-	sliderBtn[0].onclick = ()=>{left_mover();}
-
-
-
-
-   // let position = 0;
-   // let slidesToShow = 3;
-   // const slidesToScroll = 3;
-   // const container = document.querySelector('.slider-container');
-   // const track = document.querySelector('.slider-track');
-   // const prevBtn = document.querySelector('.button-prev');
-   // const nextBtn = document.querySelector('.button-next');
-   // const items = document.querySelectorAll('.slider-item');
-   // const itemsCount = items.length;
-   // const itemWidth = container.clientWidth / slidesToShow;
-   // const movePosition = slidesToScroll * itemWidth;
-
-   // // Узнаем ширину каждого элемента
-   // items.forEach((item) => {
-   //    item.style.minWidth =  `${itemWidth}px`;
-   // });
-
-   // nextBtn.addEventListener('click', function() {
-   //    const itemsLeft = itemsCount - (Math.abs(position) + slidesToShow * itemWidth) / itemWidth;
-
-   //    position -= itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-   //    setPosition();
-   //    checkBtns();
-   // });
-
-   // prevBtn.addEventListener('click', function() {
-   //    const itemsLeft = Math.abs(position) / itemWidth;
-
-   //    position += itemsLeft >= slidesToScroll ? movePosition : itemsLeft * itemWidth;
-
-   //    setPosition();
-   //    checkBtns();
-   // });
-
-   // const setPosition = () => {
-   //    track.style.transform = `translateX(${position}px)`;
-   // };
-
-   // const checkBtns = () => {
-   //    prevBtn.disabled = position === 0;
-   //    nextBtn.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
-   // };
-
-   // checkBtns();
-
-
-
    // *** Range ***
    const sliderValue = document.querySelector('.value-number');
    const inputSlider = document.querySelector('.field-input');
@@ -228,24 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
       sliderValue.classList.remove('show');
    });
 
-   // const range = document.querySelector('.range__input');
-   // const rangeValue = document.querySelector('.range-value');
 
-   // rangeValue.innerHTML = range.value;
-
-   // range.oninput = function() {
-   //    rangeValue.innerHTML = this.value;
-   // }
-
-   // range.addEventListener('mousemove', () => {
-   //    let val = range.value;
-   //    let color = 'linear-gradient(90deg, rgb(0, 156, 106)' + val + '%, rgb(255, 255, 255)' + val + '%)';
-
-   //    range.style.background = color;
-   // })
-   
-
-   
    // *** Валидация формы ***
    let reg = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
 
