@@ -1,118 +1,73 @@
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-   // *** Корзина ***
-   const productBtn = document.querySelectorAll('.product__btn');
-   const cartContentList = document.querySelector('.cart__content-list');
-   const cart = document.querySelector('.cart');
-   const cartQuantity = document.querySelector('.cart__quantity');
-   const fullprice = document.querySelector('.fullprice');
-   // const productId = document.querySelectorAll('.')
-   
-   let price = 0;
+   // *** Фиксированное меню для страницы каталога ***
+   const headerCatalog = document.querySelector('.header-catalog');
 
-   const randomId = () => {
-      return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-   };
-
-   const priceWithoutSpaces = (str) => {
-      return str.replace(/\s/g, '');
-   };
-
-   const normalPrice = (str) => {
-      return String(str).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-   };
-
-   const plusFullPrice = (currentPrice) => {
-      return price +=currentPrice;
-   };
-
-   const minusFullPrice = (currentPrice) => {
-      return price -=currentPrice;
-   };
-   
-   const printFullPrice = () => {
-      fullprice.textContent = `${normalPrice(price)} ₽`
-   };
-   
-   const printQuantity = () => {
-      let productsListLength = cartContentList.querySelector('.simplebar-content').children.length;
-      cartQuantity.textContent = productsListLength;
-      productsListLength > 0 ? cart.classList.add('active') : cart.classList.remove('active');
-   };
-
-   const deleteProduct = (productParent) => {
-
-      // get id
-      let id = productParent.querySelector('.cart__product').dataset.id;
-
-      // disabled false
-      document.querySelector(`.product[data-id="${id}"]`).querySelector('.product__btn').disabled = false;
-
-      // minus price
-      let currentPrice = parseInt(priceWithoutSpaces(productParent.querySelector('.cart__price').textContent));
-      minusFullPrice(currentPrice);
-
-      // print full price
-      printFullPrice();
-
-      // remove productParent
-      productParent.remove();      
-
-      // count and print quantity
-      printQuantity();
-   };
-
-   const generateCart = (img, title, price, id) => {
-      return   `
-      <li class="cart__item">
-         <article class="cart__product" data-id="${id}">
-            <img class="cart__img" src="${img}" alt="">
-            <div class="cart__text">
-               <div class="cart__title">${title}</div>
-               <div class="cart__price">${normalPrice(price)}</div>
-            </div>
-         </article>
-         <button class="cart__delete" aria-label="Удалить товар"></button>
-      </li>`;
-   };
-
-   productBtn.forEach(el => {
-
-      // el.closest('.product__id').getAttribute('data-id');
-      el.closest('.product').setAttribute('data-id', randomId());
-
-      el.addEventListener('click', (e) => {
-         let self = e.currentTarget;
-         let parent = self.closest('.product');
-         let id = parent.dataset.id;
-         let img = parent.querySelector('.product__img').getAttribute('src');
-         let title = parent.querySelector('.product__title').textContent;
-         priceString = parent.querySelector('.product__price').textContent;
-         let priceNumber = parseInt(priceWithoutSpaces(parent.querySelector('.product__price').textContent));
-
-         // sum
-         plusFullPrice(priceNumber);
-
-         // print full price
-         printFullPrice();
-
-         // add to cart
-         cartContentList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCart(img, title, priceString, id));
-
-         // count and print quantity
-         printQuantity();
-
-         //disabled btn
-         self.disabled = true;
-      });
-   });
-
-   cartContentList.addEventListener('click', (e) => {
-      if (e.target.classList.contains('cart__delete')) {
-         deleteProduct(e.target.closest('.cart__item'));
+   window.addEventListener('scroll', e => {
+      if(scrollY > 600) {
+         headerCatalog.classList.add('scrolled')
+      } else {
+         headerCatalog.classList.remove('scrolled')
       }
    })
 
- })
- 
- 
+
+   // *** Валидация формы и модальное окно об успешной отправке заказа ***
+   let reg = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+
+   const phone = document.getElementById('phone');
+   const errorMessage = document.querySelector('.error-message');
+   const successMessage = document.querySelector('.success-message')
+   const btn = document.getElementById('btn__cart');
+   const form = document.querySelector('.cart-form');
+   const cart = document.querySelector('.cart');
+   const cartQuantity = document.querySelector('.cart__quantity');
+   const cartSuccess = document.querySelector('.cart-success');
+   const closePopup = document.querySelector('.close-popup');
+
+   btn.addEventListener('click', e => {
+      e.preventDefault();
+      if(!reg.test(phone.value)) {
+        setError(phone);
+      } else {
+         setSuccess(phone);
+      }
+   })
+
+   function setError() {
+      phone.classList.remove('success');
+      phone.classList.add('error');
+      errorMessage.innerHTML = 'Укажите верный номер телефона!';
+      successMessage.innerHTML = '';
+   }
+
+   function setSuccess() {
+      cartSuccess.style.display = 'block';
+
+      cart.classList.remove('active');
+      cartQuantity.textContent = 0;
+
+      phone.classList.remove('error');
+      phone.classList.add('success');
+      errorMessage.innerHTML = '';
+      form.reset(); 
+   }
+
+   closePopup.addEventListener('click', function() {
+      cartSuccess.style.display = 'none';
+   })
+
+   window.addEventListener('click', function(e) {
+      if(e.target === cartSuccess ) {
+         cartSuccess.style.display = 'none';
+      }
+   })
+
+
+   
+
+
+   
+
+})
+

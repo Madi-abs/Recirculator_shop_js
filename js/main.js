@@ -162,14 +162,16 @@ document.addEventListener('DOMContentLoaded', function () {
    })
 
    function setError() {
+      phone.classList.remove('success');
       phone.classList.add('error');
       errorMessage.innerHTML = 'Укажите верный номер телефона!';
+      successMessage.innerHTML = '';
    }
 
    function setSuccess() {
       phone.classList.remove('error');
       phone.classList.add('success');
-      successMessage.innerHTML = 'Сообщение отправлено!';
+      successMessage.innerHTML = 'Сообщение отправлено! Ожидайте звонка менеджера.';
       errorMessage.innerHTML = '';
       form.reset(); 
    }

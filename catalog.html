@@ -19,7 +19,7 @@
          <div class="header-catalog__inner">
 
             <a class="btn-back" href="./index.html">
-               Вернуться на главную
+               На главную
             </a>
 
             <a class="catalog__logo" href="./index.html">
@@ -32,16 +32,37 @@
                   <div class="cart__quantity">0</div>
                </div>
 
-               <div class="cart__inner">
-                  <ul class="cart__content-list" data-simplebar>
-                  </ul>
-                  <div class="cart__summary">
-                     <div class="cart__fullprice">
-                        <span>Итого:</span>
-                        <div class="fullprice"></div>
+               <form class="cart-form" id="cart-form" method="#" action="#" novalidate>
+                  <div class="cart__inner">
+                     <ul class="cart__content-list" data-simplebar>
+                     </ul>
+                     <div class="cart__summary">
+                        <div class="cart__fullprice">
+                           <span>Итого:</span>
+                           <span class="fullprice">0</span>
+                           <span class="currency">р/шт</span>
+                        </div>
+                        
+                           <div class="form__group">
+                              <input class="form__input" id="phone" type="tel" placeholder="Укажите номер телефона*"
+                                 name="tel" data-validate-field="tel">
+                              <div class="error-message"></div>
+                              <div class="success-message"></div>
+                              <button class="btn btn__cart" id="btn__cart" type="submit">Отправить</button>
+                              <p class="politic">Нажимая на кнопку, вы соглашаетесь с
+                                 <a class="checkbox__label-politic" href="#">политикой конфиденциальности</a></p>
+                           </div>
+
+                        
                      </div>
-                     <button class="btn__cart">Отправить заказ</button>
                   </div>
+               </form>
+            </div>
+
+            <div class="cart-success">
+               <div class="cart-success__inner">
+                  <div class="cart-success__close close-popup">x</div>
+                  <p>Ваш заказ отправлен! Пожалуйста, ожидайте звонка менеджера!</p>
                </div>
             </div>
 
@@ -69,64 +90,92 @@
          <div class="container">
             <ul class="products__list">
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="01">
                      <img class="product__img" src="./images/DZR_M_46_2 1.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-1 М">
-                     <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-1 М</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 28 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 50 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">12 780 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-1 М</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 28 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 50 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">13000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="02">
                      <img class="product__img" src="./images/Mask_Group_2.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-2 М">
-                     <h3 class="product__title">
-                        Медицинский УФ-рециркулятор Milerd® DZR-2 М</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 56 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 70 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">19 880₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">
+                           Медицинский УФ-рециркулятор Milerd® DZR-2 М</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 56 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 70 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">20000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="03">
                      <img class="product__img" src="./images/Mask_Group_7.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-3 М">
-                     <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-3 М</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 83 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 90 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">25 750 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-3 М</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 83 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 90 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">26000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="04">
                      <img class="product__img" src="./images/Mask_Group_8.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-4 М">
-                     <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-4 М</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 112 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 120 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">34 900 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">Медицинский УФ-рециркулятор Milerd® DZR-4 М</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 112 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 120 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">35000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
             </ul>
@@ -152,64 +201,92 @@
          <div class="container">
             <ul class="products__list">
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="05">
                      <img class="product__img" src="./images/professional/p1_1.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-1 М">
-                     <h3 class="product__title">УФ-рециркулятор Milerd DZR-1 Pro закрытого типа</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 30 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 60 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">16 490 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">УФ-рециркулятор Milerd DZR-1 Pro закрытого типа</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 30 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 60 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">17000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="06">
                      <img class="product__img" src="./images/professional/p2_img_3-1.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-2 М">
-                     <h3 class="product__title">
-                        УФ-рециркулятор Milerd DZR-2 Pro закрытого типа</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 60 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 90 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">19 580₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">
+                           УФ-рециркулятор Milerd DZR-2 Pro закрытого типа</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 60 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 90 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">20000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="07">
                      <img class="product__img" src="./images/professional/p3_img_2-1.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-3 М">
-                     <h3 class="product__title">УФ-рециркулятор Milerd DZR-3 Pro закрытого типа</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 90 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 120 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">33 290 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">УФ-рециркулятор Milerd DZR-3 Pro закрытого типа</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 90 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 120 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">34000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
                <li class="product__item">
-                  <article class="product">
+                  <article class="product" data-id="08">
                      <img class="product__img" src="./images/professional/p4_img_1-1.webp"
                         alt="Медицинский УФ-рециркулятор Milerd® DZR-4 М">
-                     <h3 class="product__title">УФ-рециркулятор Milerd DZR-4 Pro закрытого типа</h3>
-                     <ul class="product__discription">
-                        <li class="discription__text">Управление через приложение</li>
-                        <li class="discription__text">Производительность 120 м<sup>3</sup></li>
-                        <li class="discription__text">Для помещения до 150 м<sup>2</sup></li>
-                     </ul>
-                     <div class="product__price">35 720 ₽/шт</div>
-                     <!-- <a class="product__details" href="#">Подробнее</a> -->
-                     <button class="btn product__btn">В корзину</button>
+                     <div class="product__info">
+                        <h3 class="product__title">УФ-рециркулятор Milerd DZR-4 Pro закрытого типа</h3>
+                        <ul class="product__discription">
+                           <li class="discription__text">Управление через приложение</li>
+                           <li class="discription__text">Производительность 120 м<sup>3</sup></li>
+                           <li class="discription__text">Для помещения до 150 м<sup>2</sup></li>
+                        </ul>
+                        <div class="product__price">36000</div>
+
+                        <div class="product__counter">
+                           <div class="counter__control" data-action="minus">-</div>
+                           <div class="counter__current" data-counter>1</div>
+                           <div class="counter__control" data-action="plus">+</div>
+                        </div>
+                        <button class="btn product__btn" data-cart>В корзину</button>
+                     </div>
                   </article>
                </li>
             </ul>
@@ -235,40 +312,54 @@
                <div class="container">
                   <ul class="products__list">
                      <li class="product__item">
-                        <article class="product">
+                        <article class="product" data-id="09">
                            <img class="product__img" src="./images/elite/DZR-5-Render-2.webp"
                               alt="Медицинский УФ-рециркулятор Milerd® DZR-3 М">
-                           <h3 class="product__title">УФ-рециркулятор Milerd DZR-5 закрытого типа</h3>
-                           <ul class="product__discription">
-                              <li class="discription__text">Управление через приложение</li>
-                              <li class="discription__text">Производительность 150 м<sup>3</sup></li>
-                              <li class="discription__text">Для помещения до 170 м<sup>2</sup></li>
-                           </ul>
-                           <div class="product__price">48 900 ₽/шт</div>
-                           <!-- <a class="product__details" href="#">Подробнее</a> -->
-                           <button class="btn product__btn">В корзину</button>
+                          <div class="product__info">
+                            <h3 class="product__title">УФ-рециркулятор Milerd DZR-5 закрытого типа</h3>
+                            <ul class="product__discription">
+                               <li class="discription__text">Управление через приложение</li>
+                               <li class="discription__text">Производительность 150 м<sup>3</sup></li>
+                               <li class="discription__text">Для помещения до 170 м<sup>2</sup></li>
+                            </ul>
+                            <div class="product__price">49000</div>
+
+                            <div class="product__counter">
+                               <div class="counter__control" data-action="minus">-</div>
+                               <div class="counter__current" data-counter>1</div>
+                               <div class="counter__control" data-action="plus">+</div>
+                            </div>
+                            <button class="btn product__btn" data-cart>В корзину</button>
+                          </div>
                         </article>
                      </li>
                      <li class="product__item">
-                        <article class="product">
+                        <article class="product" data-id="10">
                            <img class="product__img" src="./images/elite/DZR-6-Render-2.webp"
                               alt="Медицинский УФ-рециркулятор Milerd® DZR-4 М">
-                           <h3 class="product__title">УФ-рециркулятор Milerd DZR-6 закрытого типа</h3>
-                           <ul class="product__discription">
-                              <li class="discription__text">Управление через приложение</li>
-                              <li class="discription__text">Производительность 225 м<sup>3</sup></li>
-                              <li class="discription__text">Для помещения до 230 м<sup>2</sup></li>
-                           </ul>
-                           <div class="product__price">59 900 ₽/шт</div>
-                           <!-- <a class="product__details" href="#">Подробнее</a> -->
-                           <button class="btn product__btn">В корзину</button>
+                           <div class="product__info">
+                              <h3 class="product__title">УФ-рециркулятор Milerd DZR-6 закрытого типа</h3>
+                              <ul class="product__discription">
+                                 <li class="discription__text">Управление через приложение</li>
+                                 <li class="discription__text">Производительность 225 м<sup>3</sup></li>
+                                 <li class="discription__text">Для помещения до 230 м<sup>2</sup></li>
+                              </ul>
+                              <div class="product__price">60000</div>
+
+                              <div class="product__counter">
+                                 <div class="counter__control" data-action="minus">-</div>
+                                 <div class="counter__current" data-counter>1</div>
+                                 <div class="counter__control" data-action="plus">+</div>
+                              </div>
+                              <button class="btn product__btn" data-cart>В корзину</button>
+                           </div>
                         </article>
                      </li>
                   </ul>
                </div>
             </section>
-
    </main>
+
    <footer class="footer">
       <div class="container">
          <div class="footer__inner">
@@ -285,8 +376,12 @@
 
    </footer>
 
-   <script src="./js/simplebar.js"></script>
-   <script src="./js/catalog.js"></script>
+   <script src="./js/simplebar.js" type="text/javascript"></script>
+   <script src="./js/calcFullPrice.js" type="text/javascript"></script>
+   <script src="./js/printQuantity.js" type="text/javascript"></script>
+   <script src="./js/counter.js" type="text/javascript"></script>
+   <script src="./js/cart.js" type="text/javascript"></script>
+   <script src="./js/catalog.js" type="text/javascript"></script>
    
 </body>
 </html>
