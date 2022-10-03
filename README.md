@@ -4,6 +4,6 @@
 3. Табы и валидация формы на js
 4. Слайдер на css
 
-Проверка
+Проверка-2
 
 https://madi-abs.github.io/Recirculator_shop_js/
