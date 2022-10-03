@@ -22,14 +22,9 @@
                На главную
             </a>
 
-            <a class="catalog__logo" href="./index.html">
-               <img class="logo__img" src="./images/logo.svg" alt="logo">
-            </a>
-
             <div class="cart">
                <div class="cart__header">
-                  <p class="cart__name">Корзина</p>
-                  <div class="cart__quantity">0</div>
+                  <p class="cart__name">Корзина пуста</p>
                </div>
 
                <form class="cart-form" id="cart-form" method="#" action="#" novalidate>
@@ -40,20 +35,17 @@
                         <div class="cart__fullprice">
                            <span>Итого:</span>
                            <span class="fullprice">0</span>
-                           <span class="currency">р/шт</span>
+                           <span class="currency">руб.</span>
                         </div>
                         
-                           <div class="form__group">
-                              <input class="form__input" id="phone" type="tel" placeholder="Укажите номер телефона*"
-                                 name="tel" data-validate-field="tel">
-                              <div class="error-message"></div>
-                              <div class="success-message"></div>
-                              <button class="btn btn__cart" id="btn__cart" type="submit">Отправить</button>
-                              <p class="politic">Нажимая на кнопку, вы соглашаетесь с
-                                 <a class="checkbox__label-politic" href="#">политикой конфиденциальности</a></p>
-                           </div>
+                           <input class="form__input" id="phone" type="tel" placeholder="Укажите номер телефона*"
+                              name="tel" data-validate-field="tel">
+                           <div class="error-message"></div>
+                           <div class="success-message"></div>
+                           <button class="btn btn__cart" id="btn__cart" type="submit">Отправить</button>
+                           <p class="politic">Нажимая на кнопку, вы соглашаетесь с
+                              <a class="checkbox__label-politic" href="#">политикой конфиденциальности</a></p>
 
-                        
                      </div>
                   </div>
                </form>
@@ -378,7 +370,7 @@
 
    <script src="./js/simplebar.js" type="text/javascript"></script>
    <script src="./js/calcFullPrice.js" type="text/javascript"></script>
-   <script src="./js/printQuantity.js" type="text/javascript"></script>
+   <script src="./js/cartActive.js" type="text/javascript"></script>
    <script src="./js/counter.js" type="text/javascript"></script>
    <script src="./js/cart.js" type="text/javascript"></script>
    <script src="./js/catalog.js" type="text/javascript"></script>

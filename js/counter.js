@@ -25,7 +25,7 @@ window.addEventListener('click', function (e) {
 
          // если товар находится в корзине, то его можно удалить из корзины
          e.target.closest('.cart__item').remove();
-         printQuantity();
+         cartActive();
 
          calcFullPrice();
       }

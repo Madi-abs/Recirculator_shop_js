@@ -21,18 +21,28 @@ document.addEventListener('DOMContentLoaded', function () {
    const btn = document.getElementById('btn__cart');
    const form = document.querySelector('.cart-form');
    const cart = document.querySelector('.cart');
-   const cartQuantity = document.querySelector('.cart__quantity');
    const cartSuccess = document.querySelector('.cart-success');
    const closePopup = document.querySelector('.close-popup');
+   const cartName = document.querySelector('.cart__name');
 
-   btn.addEventListener('click', e => {
+   form.addEventListener('submit', function(e) {
       e.preventDefault();
+
+      const cartItems = this.querySelectorAll('.cart__item');
+
       if(!reg.test(phone.value)) {
         setError(phone);
       } else {
          setSuccess(phone);
+         form.reset();
+
+         cartItems.forEach(item => {
+            item.remove();
+         })
       }
    })
+
+
 
    function setError() {
       phone.classList.remove('success');
@@ -42,15 +52,13 @@ document.addEventListener('DOMContentLoaded', function () {
    }
 
    function setSuccess() {
+      cartName.textContent = 'Корзина пуста';
       cartSuccess.style.display = 'block';
 
       cart.classList.remove('active');
-      cartQuantity.textContent = 0;
 
       phone.classList.remove('error');
-      phone.classList.add('success');
       errorMessage.innerHTML = '';
-      form.reset(); 
    }
 
    closePopup.addEventListener('click', function() {
@@ -62,12 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
          cartSuccess.style.display = 'none';
       }
    })
-
-
-   
-
-
-   
 
 })
 

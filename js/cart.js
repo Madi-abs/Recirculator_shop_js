@@ -44,12 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
                </li>`
 
             cartContentList.querySelector('.simplebar-content').insertAdjacentHTML('afterbegin', generateCart);
-            printQuantity();
+            cartActive();
          }
 
          // сбрасываем счетчик в карточке товара после добавления товара в корзину
          productItem.querySelector('[data-counter]').textContent = '1';
-         calcFullPrice()
+
+         // пересчитываем корзину
+         calcFullPrice();
       }
    });
 
